@@ -1,0 +1,18 @@
+<hr>
+
+<!-- MACRO ON ACTIVATE -->
+<h3 class="form-header"><i class="far fa-file-code"></i> Macro on Activate</h3>
+<p class="notes">{{test_key}}</p>
+
+<div class="form-group">
+    <label>{{entity.navName}}</label>
+    <select id="macroList">
+        <option value="0"> - Do Nothing - </option>
+        {{#select currentMacro}}
+        {{#each macroList}}
+            <option value="{{this.data._id}}">{{this.data.name}}</option>
+        {{/each}}
+        {{/select}}
+    </select>
+    <p class="notes">test</p>
+</div>

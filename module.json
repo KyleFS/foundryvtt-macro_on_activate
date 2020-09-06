@@ -3,8 +3,8 @@
   "title": "Macro on Scene Activate",
   "description": "",
   "authors": [{"name":"kyle Spiller","email":"me@kylespiller.com" }],
-  "version": "0.0.1",
-  "minimumCoreVersion": "0.6.0",
+  "version": "0.1.0",
+  "minimumCoreVersion": "0.6.6",
   "compatibleCoreVersion":"0.6.6",
   "scripts": [
     "scripts/macro-on-activate.js"
