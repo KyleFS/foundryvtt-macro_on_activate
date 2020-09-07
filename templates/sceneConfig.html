@@ -7,7 +7,7 @@
 <div class="form-group">
     <label>{{entity.navName}}</label>
     <select id="macroList">
-        <option value="0"> - Do Nothing - </option>
+        <option value="0">&nbsp;</option>
         {{#select currentMacro}}
         {{#each macroList}}
             <option value="{{this.data._id}}">{{this.data.name}}</option>

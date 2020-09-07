@@ -10,19 +10,22 @@ Hooks.on("init", () => {
 })
 
 Hooks.on("canvasReady", function() {
-    let sceneID = game.scenes.active.data._id;
+    let sceneID = canvas.scene.data._id;
+
     let currentSettings = game.settings.get("macro-on-activate", "sceneData");
     if( currentSettings[sceneID] === "undefined"){
         return;
     }
 
     let macroID = currentSettings[sceneID];
-    if( !macroID ) {
+
+    if( typeof macroID === undefined || macroID == 0 ) {
         return;
     }
 
     let filteredMacro = game.macros.filter(m => m._id === macroID)[0];
-    if (filteredMacro === undefined) {
+
+    if ( typeof filteredMacro === undefined ) {
         return;
     }
 
